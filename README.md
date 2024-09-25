@@ -12,6 +12,6 @@
 
 Para rodar o projeto localmente:
 
-1. Clone este repositório:
+1. Clone esse repositório:
    ```bash
    git clone https://github.com/matschneider6/webpage-bulls.git
