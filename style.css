@@ -2,6 +2,25 @@
 
 /* Estilos básicos adicionados por Membro 4 Matheus Schneider */
 /* Membro 4 Matheus Schneider deve adicionar os estilos básicos aqui */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    --red:#d63a25;
+    --white:#fff;
+    --dark:#1e1c2a;
+}
+body{
+    color: var(--dark);
+    background: var(--white);
+}
 
 :root {
     --red: #d63a25;
