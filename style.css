@@ -1,7 +1,3 @@
-/* style.css */
-
-/* Estilos básicos adicionados por Membro 4 Matheus Schneider */
-/* Membro 4 Matheus Schneider deve adicionar os estilos básicos aqui */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 *{
@@ -12,39 +8,38 @@
     list-style: none;
     text-decoration: none;
 }
-:root{
-    --red:#d63a25;
+
+.CurrentPage{
+    text-decoration: underline #fff;
+}
+
+:root{ /*var shar*/ /* o root é um espaço especifico para se armazenar as variaveis criadas */
+    --red:#ad2817;
     --white:#fff;
     --dark:#1e1c2a;
+    --cromatico: #981a2d;
+    --gray: #746d6d86;
 }
 body{
-    color: var(--dark);
-    background: var(--white);
+   /* color: var(--white);
+    background: var(--dark);*/
+    background: linear-gradient(50deg, red, black);
 }
-
-:root {
-    --red: #d63a25;
-    --white: #fff;
-    --dark: #1e1c2a;
-}
-
-/* Estilos detalhados para navegação e textos adicionados por Membro 5 Victor */
-/* Membro 5 Victor deve adicionar os estilos detalhados aqui Abaixo *
-Victor 5:
-/* Estilos detalhados para navegação e textos adicionados por Membro 5 */
 .navigation{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 18px 40px;
-    box-shadow: 0 0.1rem 0.5rem #ccc;
+    padding: 20px 40px;
+    box-shadow: 0 0.1rem 0.5rem #cccccc74;
     width: 100%;
-    background: var(--white);
+    background: var(--red);
     transition: all 0.5s;
     position: fixed;
+    padding: 10px;
+    
 }
 .navigation .logo{
-    color: var(--red);
+    color: var(--white);
     font-size: 1.7rem;
     font-weight: 600;
 }
@@ -57,13 +52,13 @@ Victor 5:
     gap: 5rem;
 }
 .navigation ul li a{
-    color: var(--dark);
+    color: var(--white);
     font-size: 17px;
     font-weight: 500;
     transition: all 0.5s;
 }
 .navigation ul li a:hover{
-    color: var(--red);
+    color: var(--dark);
 }
 .navigation i{
     cursor: pointer;
@@ -78,11 +73,106 @@ Victor 5:
     width: 28px;
     height: 3px;
     border-radius: 3px;
-    background: var(--dark);
+    background: var(--white);
     margin: 5px auto;
     transition: all 0.3s;
 }
 .menu .bar:nth-child(1),
+
 .menu .bar:nth-child(3){
-    background: var(--red);
+    background: var(--dark);
+}
+.home{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10%;
+}
+.home-text{
+    max-width: 37rem;
+}
+.home-text .text-h4{
+    font-size: 1.5rem;
+    color: var(--red);
+    margin-bottom: 1rem;
+}
+.home-text .text-h1{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    line-height: 4rem;
+}
+.home-text p{
+    margin-bottom: 4rem;
+}
+.home-btn{
+    padding: 15px 45px;
+    background: var(--white);
+    color: var(--dark);
+    border-radius: 10px;
+    font-weight: 700;
+    transition: all 0.5s;
+}
+.home-btn:hover{
+    background: #fc4c35;
+}
+.home-img img{
+    width: 100%;
+}
+@media (max-width:785px) {
+    .navigation{
+        padding: 18px 20px;
+    }
+    .menu{
+        display: block;
+    }
+    .menu.ativo .bar:nth-child(1){
+        transform:  translateY(8px) rotate(45deg);
+    }
+    .menu.ativo .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: var(--dark);
+        gap: -10px;
+        transition: 0.3s;
+    }
+    .nav-menu.ativo{
+        right: 0;
+    }
+    .nav-item{
+        margin: 16px 0;
+    }
+
+    /*main*/
+    .home{
+        padding: 100px 2%;
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+        gap: 5rem;
+    }
+    .home .text-h4{
+        font-size: 15px;
+    }
+    .home .text-h1{
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+    .home p{
+        font-size: 15px;
+    }
+    .home-img{
+        width: 125%;
+    }
 }
