@@ -13,6 +13,41 @@
     text-decoration: underline #fff;
 }
 
+#caixa_logo{
+
+    width: 7%; 
+    height: auto;
+    position: absolute;
+    padding: -1000px;
+    box-shadow: 0.0.1rem 0.10rem #cccccc74;
+    top: 7%;
+    width: 6% ;
+    height: 8.3% ;
+
+}
+.caixa {
+
+    box-shadow: 0.0.1rem 0.10rem #cccccc74;
+    top: 7%;
+    position: absolute;
+    width: 94%;
+    left:6%;
+   
+}
+
+.navigation{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 51px;
+    width: 100%;
+    background: var(--red);
+    transition: all 4s;
+    padding: 10px;
+    
+}
+
 :root{ /*var shar*/ /* o root é um espaço especifico para se armazenar as variaveis criadas */
     --red:#ad2817;
     --white:#fff;
@@ -25,19 +60,7 @@ body{
     background: var(--dark);*/
     background: linear-gradient(50deg, red, black);
 }
-.navigation{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 40px;
-    box-shadow: 0 0.1rem 0.5rem #cccccc74;
-    width: 100%;
-    background: var(--red);
-    transition: all 0.5s;
-    position: fixed;
-    padding: 10px;
-    
-}
+
 .navigation .logo{
     color: var(--white);
     font-size: 1.7rem;
@@ -49,7 +72,7 @@ body{
 .navigation ul{
     display: flex;
     align-items: center;
-    gap: 5rem;
+    gap: 3rem;
 }
 .navigation ul li a{
     color: var(--white);
@@ -80,7 +103,7 @@ body{
 .menu .bar:nth-child(1),
 
 .menu .bar:nth-child(3){
-    background: var(--dark);
+    background: var(--white);
 }
 .home{
     width: 100%;
@@ -130,10 +153,10 @@ body{
     .menu.ativo .bar:nth-child(1){
         transform:  translateY(8px) rotate(45deg);
     }
-    .menu.ativo .bar:nth-child(2) {
+    .menu .ativo .bar:nth-child(2) {
         opacity: 0;
     }
-    .menu.ativo .bar:nth-child(3){
+    .menu .ativo .bar:nth-child(3){
         transform: translateY(-8px) rotate(-45deg);
     }
     .nav-menu{
