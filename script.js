@@ -13,9 +13,22 @@ let homeLink = document.querySelector("#nav-link1");
 if (currentPage == "Home.html" || "Home.html#") {
     homeLink.classList.add("CurrentPage");
 }
-// asldj]satisfiess
-// s
-// s
-// s
-// //s
-// s
+document.getElementById('form-contact').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const email = document.getElementById('email').value;
+
+    const contact = {
+        name: name,
+        phone: phone,
+        email: email
+    };
+
+    localStorage.setItem('contact', JSON.stringify(contact));
+
+    alert('Contato salvo com sucesso no LocalStorage!');
+    document.getElementById('form-contact').reset();
+});
+
