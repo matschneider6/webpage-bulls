@@ -52,8 +52,12 @@
     --red:#ad2817;
     --white:#fff;
     --dark:#1e1c2a;
-    --cromatico: #981a2d;
     --gray: #746d6d86;
+    --color-neutral-0: #0e0c0c;
+    --color-neutral-10: #171717;
+    --color-neutral-30: #a8a29e;
+    --color-neutral-40: #f5f5f5;
+
 }
 body{
    /* color: var(--white);
@@ -143,7 +147,7 @@ body{
 .home-img img{
     width: 100%;
 }
-@media (max-width:785px) {
+@media screen(max-width:785px) {
     .navigation{
         padding: 18px 20px;
     }
@@ -198,4 +202,36 @@ body{
     .home-img{
         width: 125%;
     }
+    #caixa_logo{
+
+        
+
+    }
+    .caixa{
+
+
+    }
+}
+
+
+.All_FeedBack{
+
+    width: 100%;
+    color: var(--color-neutral-40);
+
+}
+
+.FeedBack{
+
+    background-color: var(--color-neutral-0);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding:3 rem 3.5rem;
+
+}
+
+#feedbackForm{
+
+
+
 }

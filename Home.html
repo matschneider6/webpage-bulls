@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="/imagens/BullsBurguer_Logo.jpeg" type="image/x-icon">
+    <link rel="shortcut icon" href="/imagens/Logo_Bulls_burguer.PNG" type="image/x-icon">
 
     <title>Bulls Burguer</title>
 
@@ -19,10 +19,10 @@
             <nav class="navigation">
                 <a href="#" class="logo">B<span>u</span>lls Bu<span>rgu</span>er</a>
                     <ul class="nav-menu">
-                    <li class="nav-item"><a href="#" id="nav-link1">Home</a></li>
+                    <li class="nav-item"><a href="./Home.html" id="nav-link1">Home</a></li>
                     <li class="nav-item"><a href="./Sobre_nos.html" id="nav-link2">About</a></li>
-                    <li class="nav-item"><a href="#" id="nav-link3">Menu</a></li>
-                    <li class="nav-item"><a href="#" id="nav-link4">Contact</a></li>
+                    <li class="nav-item"><a href="./Menu.html" id="nav-link3">Menu</a></li>
+                    <li class="nav-item"><a href="./Contatos.html" id="nav-link3">Menu</a></li>
                         <i class='bx bx-search'></i>
         </div>
                         
@@ -47,76 +47,93 @@
                 <a href="#" class="home-btn">Peça já</a>
             </div>
             <div class="home-img">
-                <img src="/imagens/Bulls_Burguer_Trailer.PNG" alt="hamburguer">
+                <img src="/imagens/ " alt="">
             </div>
         </section>
     </main>
 
-    <section id="contact-form">
-        <h2>Entre em contato conosco</h2>
-        <form id="form-contact">
-            <label for="name">Nome:</label>
-            <input type="text" id="name" required><br>
+    <div class="All_FeedBack">
+        <div class="FeedBack">
 
-            <label for="phone">Telefone:</label>
-            <input type="text" id="phone" required><br>
+    <h2>Deixe seu Feedback</h2>
+    <form id="feedbackForm">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" placeholder="Seu nome" required>
+        <br><br>
+        
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" placeholder="Seu e-mail" required>
+        <br><br>
+        
+        <label for="contato">Contato:</label>
+        <input type="text" id="contato" placeholder="Telefone ou WhatsApp" required>
+        <br><br>
+        
+        <label for="feedbackInput">Feedback:</label>
+        <textarea id="feedbackInput" rows="4" cols="50" placeholder="Digite seu feedback aqui..." required></textarea>
+        <br><br>
+        
+        <button type="button" onclick="salvarFeedback()">Enviar Feedback</button>
+    </form>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" required><br>
+    <h3>Feedbacks Salvos:</h3>
+    <ul id="feedbackList"></ul>
 
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
-    
-    <main>
-        <br><br><br>
-        <section class="home">
-            <div class="home-text">
-                <h1 class="text-h1">Igor e Amanda...</h1>
-                <p>Bem-vindo a Bulls Burguer, onde cada mordida  é uma jornada rumo a perfeição do sabor.Delicie-se com uma sinfonia de ingredientes Premium, hambúrguers cuidadosamente elaborados e molhos de dar água na boca.</p>
-                <a href="#" class="home-btn">Peça já</a>
-            </div>
-            <div class="home-img">
-                <img src="/imagens/Bulls_Burguer_Trailer.PNG" alt="hamburguer">
-            </div>
-        </section>
-    </main>
-        <br><br><br>
-    <section class="home">
-        <div class="home-text">
-            <h1 class="text-h1">Nossos seguites contatos são...</h1>
-            <p>Bem-vindo a Bulls Burguer, onde cada mordida  é uma jornada rumo a perfeição do sabor.Delicie-se com uma sinfonia de ingredientes Premium, hambúrguers cuidadosamente elaborados e molhos de dar água na boca.</p>
-            <a href="#" class="home-btn">Peça já</a>
+    <script>
+        // Função para salvar feedback no localStorage
+        function salvarFeedback() {
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const contato = document.getElementById('contato').value;
+            const feedback = document.getElementById('feedbackInput').value;
+
+            if (nome && email && contato && feedback) {
+                const feedbackData = {
+                    nome: nome,
+                    email: email,
+                    contato: contato,
+                    feedback: feedback,
+                    data: new Date().toLocaleString()
+                };
+
+                // Armazena o feedback no localStorage
+                const feedbackId = 'feedback_' + new Date().getTime();
+                localStorage.setItem(feedbackId, JSON.stringify(feedbackData));
+
+                // Limpa o formulário
+                document.getElementById('feedbackForm').reset();
+
+                // Atualiza a lista de feedbacks
+                exibirFeedbacks();
+            } else {
+                alert("Por favor, preencha todos os campos!");
+            }
+        }
+
+        // Função para exibir os feedbacks salvos
+        function exibirFeedbacks() {
+            const feedbackList = document.getElementById('feedbackList');
+            feedbackList.innerHTML = '';
+
+            // Itera sobre todos os itens no localStorage
+            for (let i = 0; i < localStorage.length; i++) {
+                const key = localStorage.key(i);
+                if (key.startsWith('feedback_')) {
+                    const feedbackData = JSON.parse(localStorage.getItem(key));
+
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `Nome: ${feedbackData.nome} | E-mail: ${feedbackData.email} | Contato: ${feedbackData.contato} | Feedback: ${feedbackData.feedback} | Data: ${feedbackData.data}`;
+                    feedbackList.appendChild(listItem);
+                }
+            }
+        }
+
+        // Exibe os feedbacks salvos ao carregar a página
+        window.onload = exibirFeedbacks;
+    </script>
+
         </div>
-        <div class="home-img">
-            <img src="/imagens/Bulls_Burguer_Trailer.PNG" alt="hamburguer">
-        </div>
-    </section>
-    </main>
-        <br><br><br>
-    <section class="home">
-        <div class="home-text">
-            <h1 class="text-h1">Veja agora nosso incrivel e vasto menu com lanches, porções e tudo o que temos de bom!</h1>
-            <p>Bem-vindo a Bulls Burguer, onde cada mordida  é uma jornada rumo a perfeição do sabor.Delicie-se com uma sinfonia de ingredientes Premium, hambúrguers cuidadosamente elaborados e molhos de dar água na boca.</p>
-            <a href="#" class="home-btn">Peça já</a>
-        </div>
-        <div class="home-img">
-            <img src="/imagens/Bulls_Burguer_Trailer.PNG" alt="hamburguer">
-        </div>
-    </section>
-    </main>
-        <br><br><br>
-    <section class="so_testando">
-        <div class="so_testando-text">
-            <h1 class="text-h1">TExto 5</h1>
-            <p>Bem-vindo a Bulls Burguer, onde cada mordida  é uma jornada rumo a perfeição do sabor.Delicie-se com uma sinfonia de ingredientes Premium, hambúrguers cuidadosamente elaborados e molhos de dar água na boca.</p>
-            <a href="#" class="so_testando-btn">Peça já</a>
-        </div>
-        <div class="-img">
-            <img src="/imagens/Bulls_Burguer_Trailer.PNG" alt="hamburguer">
-        </div>
-    </section>
-    </main>
+    </div>
 
     <script src="/Javascripit/script.js"></script>
 
