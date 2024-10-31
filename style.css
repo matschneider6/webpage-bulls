@@ -145,7 +145,7 @@ body{
     background: #fc4c35;
 }
 .home-img img{
-    width: 100%;
+    width: 100%; /* */
 }
 
 .All_FeedBack{
