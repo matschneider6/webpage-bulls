@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 @import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -5,6 +6,9 @@
     --light-bg:var(--light-bg);
   }
 
+=======
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+>>>>>>> c227427fabe1a94439ef22b4b4e726f57bdcaba9
 
 *{
     margin: 0;
@@ -19,31 +23,58 @@
     text-decoration: underline #fff;
 }
 
+#caixa_logo{
+
+    width: 7%; 
+    height: auto;
+    position: absolute;
+    padding: -1000px;
+    box-shadow: 0.0.1rem 0.10rem #cccccc74;
+    top: 7%;
+    width: 6% ;
+    height: 8.3% ;
+
+}
+.caixa {
+
+    box-shadow: 0.0.1rem 0.10rem #cccccc74;
+    top: 7%;
+    position: absolute;
+    width: 94%;
+    left:6%;
+   
+}
+
+.navigation{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 51px;
+    width: 100%;
+    background: var(--red);
+    transition: all 4s;
+    padding: 10px;
+    
+}
+
 :root{ /*var shar*/ /* o root é um espaço especifico para se armazenar as variaveis criadas */
     --red:#ad2817;
     --white:#fff;
     --dark:#1e1c2a;
-    --cromatico: #981a2d;
     --gray: #746d6d86;
+    --color-neutral-0: #0e0c0c;
+    --color-neutral-10: #171717;
+    --color-neutral-30: #a8a29e;
+    --color-neutral-40: #f5f5f5;
+
 }
 body{
    /* color: var(--white);
     background: var(--dark);*/
     background: linear-gradient(50deg, red, black);
 }
-.navigation{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 40px;
-    box-shadow: 0 0.1rem 0.5rem #cccccc74;
-    width: 100%;
-    background: var(--red);
-    transition: all 0.5s;
-    position: fixed;
-    padding: 10px;
-    
-}
+
 .navigation .logo{
     color: var(--white);
     font-size: 1.7rem;
@@ -55,7 +86,7 @@ body{
 .navigation ul{
     display: flex;
     align-items: center;
-    gap: 5rem;
+    gap: 3rem;
 }
 .navigation ul li a{
     color: var(--white);
@@ -86,7 +117,7 @@ body{
 .menu .bar:nth-child(1),
 
 .menu .bar:nth-child(3){
-    background: var(--dark);
+    background: var(--white);
 }
 .home{
     width: 100%;
@@ -124,42 +155,15 @@ body{
     background: #fc4c35;
 }
 .home-img img{
-    width: 100%;
+    width: 100%; /* */
 }
-@media (max-width:785px) {
-    .navigation{
-        padding: 18px 20px;
-    }
-    .menu{
-        display: block;
-    }
-    .menu.ativo .bar:nth-child(1){
-        transform:  translateY(8px) rotate(45deg);
-    }
-    .menu.ativo .bar:nth-child(2) {
-        opacity: 0;
-    }
-    .menu.ativo .bar:nth-child(3){
-        transform: translateY(-8px) rotate(-45deg);
-    }
-    .nav-menu{
-        position: fixed;
-        right: -100%;
-        top: 70px;
-        width: 100%;
-        height: 100%;
-        flex-direction: column;
-        background: var(--dark);
-        gap: -10px;
-        transition: 0.3s;
-    }
-    .nav-menu.ativo{
-        right: 0;
-    }
-    .nav-item{
-        margin: 16px 0;
-    }
 
+.All_FeedBack{
+
+    width: 100%;
+    color: var(--color-neutral-40);
+
+<<<<<<< HEAD
     /*main*/
     .home{
         padding: 100px 2%;
@@ -233,4 +237,21 @@ body{
     position: relative;
     left: 53%;
     bottom: 30px;
+=======
+}
+
+.FeedBack{
+
+    background-color: var(--color-neutral-0);
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    padding:3 rem 3.5rem;
+
+}
+
+#feedbackForm{
+
+
+
+>>>>>>> c227427fabe1a94439ef22b4b4e726f57bdcaba9
 }
