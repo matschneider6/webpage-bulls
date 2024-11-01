@@ -14,7 +14,7 @@ if (currentPage == "Home.html" || "Home.html#") {
     homeLink.classList.add("CurrentPage");
 }
 document.getElementById('form-contact').addEventListener('submit', function(e) {
-    e.preventDefault();
+    e.preventDefault(); // ee
 
     const name = document.getElementById('name').value;
     const phone = document.getElementById('phone').value;
