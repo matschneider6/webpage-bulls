@@ -1,0 +1,21 @@
+.All_FeedBack{
+
+    width: 100%;
+    color: var(--color-neutral-40);
+
+}
+
+.FeedBack{
+
+    background-color: var(--color-neutral-0);
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    padding:3 rem 3.5rem;
+
+}
+
+#feedbackForm{
+
+
+
+}
