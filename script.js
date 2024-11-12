@@ -25,6 +25,7 @@ document.getElementById('form-contact').addEventListener('submit', function(e) {
         phone: phone,
         email: email
     };
+    
 
     localStorage.setItem('contact', JSON.stringify(contact));
 

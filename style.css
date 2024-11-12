@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --light-bg:var(--light-bg);
+  }
+
 
 *{
     margin: 0;
@@ -15,20 +21,19 @@
 
 #caixa_logo{
 
-    width: 7%; 
     height: auto;
     position: absolute;
     padding: -1000px;
-    box-shadow: 0.0.1rem 0.10rem #cccccc74;
-    top: 7%;
-    width: 6% ;
-    height: 8.3% ;
+    box-shadow: 0.0.1rem 0.10rem #00000074;
+    top: 0%;
+    width: 6%;
+    height: 7.2% ;
 
 }
 .caixa {
 
-    box-shadow: 0.0.1rem 0.10rem #cccccc74;
-    top: 7%;
+    box-shadow: 0 0.1rem 0.5rem #fefbfb;
+    top: 0%;
     position: absolute;
     width: 94%;
     left:6%;
@@ -41,17 +46,17 @@
     align-items: center;
     justify-content: space-between;
     padding: 40px 51px;
-    width: 100%;
-    background: var(--red);
+    width: 95%;
+    background: var(--dark);
     transition: all 4s;
     padding: 10px;
     
 }
 
 :root{ /*var shar*/ /* o root é um espaço especifico para se armazenar as variaveis criadas */
-    --red:#ad2817;
-    --white:#fff;
-    --dark:#1e1c2a;
+    --red:#f90000;
+    --white:#ffffff;
+    --dark:#000000;
     --gray: #746d6d86;
     --color-neutral-0: #0e0c0c;
     --color-neutral-10: #171717;
@@ -60,9 +65,11 @@
 
 }
 body{
-   /* color: var(--white);
-    background: var(--dark);*/
-    background: linear-gradient(50deg, red, black);
+   color: var(--white);
+    background: linear-gradient(to bottom, black 4%, red, #f20000d5 , black);
+    min-height: 100vh;
+    background-color: black; /* Fallback */
+    min-height: 100vh;
 }
 
 .navigation .logo{
@@ -71,7 +78,7 @@ body{
     font-weight: 600;
 }
 .logo span{
-    color: var(--dark);
+    color: var(--red);
 }
 .navigation ul{
     display: flex;
@@ -79,13 +86,13 @@ body{
     gap: 3rem;
 }
 .navigation ul li a{
-    color: var(--white);
+    color: var(--red);
     font-size: 17px;
     font-weight: 500;
     transition: all 0.5s;
 }
 .navigation ul li a:hover{
-    color: var(--dark);
+    color: #891708
 }
 .navigation i{
     cursor: pointer;
@@ -110,7 +117,7 @@ body{
     background: var(--white);
 }
 .home{
-    width: 100%;
+    width: 80%;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -122,7 +129,7 @@ body{
 }
 .home-text .text-h4{
     font-size: 1.5rem;
-    color: var(--red);
+    color: var(--dark);
     margin-bottom: 1rem;
 }
 .home-text .text-h1{
@@ -135,14 +142,14 @@ body{
 }
 .home-btn{
     padding: 15px 45px;
-    background: var(--white);
-    color: var(--dark);
+    background: #620b00;
+    color: var(--white);
     border-radius: 10px;
     font-weight: 700;
     transition: all 0.5s;
 }
 .home-btn:hover{
-    background: #fc4c35;
+    background: #310909;
 }
 .home-img img{
     width: 100%; /* */
@@ -153,19 +160,112 @@ body{
     width: 100%;
     color: var(--color-neutral-40);
 
+    /*main*/
+    .home{
+        padding: 30px 10%;
+        margin: 0;
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+        gap: 5rem;
+    }
+    .home .text-h4{
+        font-size: 15px;
+    }
+    .home .text-h1{
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+    .home p{
+        font-size: 15px;
+    }
+    .home-img{
+        width: 125%;
+    }
+}
+.about{
+    width: 100%;
+    height: 100vh;
+    padding: 70px 0px;
+    background-color: #fff;
+    background-color: transparent;
+}
+.about .about-main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
 }
 
-.FeedBack{
-
-    background-color: var(--color-neutral-0);
-    display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    padding:3 rem 3.5rem;
+.about .about-main .image img{
+    width: 700px;
+    position: relative;
+    top: 60px;
+}
+.about .about-main .about-text h1 span{
+    color: #981a2d;
+    margin-right: 10px;
+    font-family: mv boli;
 
 }
+.about .about-main .about-text h1{
+    position: relative;
+    font-size: 55px;
+    bottom: 30px;
+    left: 20px;
+}
+.about .about-main .about-text h3{
+    font-size: 30px;
+    margin: 30px 20px;
+   
+}
+.about .about-main .about-text p{
+    width: 650px;
+    text-align: justify;
+    margin-right: 30px;
+    line-height: 22px;
+    margin-left: 20px;
+}
 
-#feedbackForm{
+.about .about-btn{
+    background: #981a2d;
+    padding: 12px 25px;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    left: 53%;
+    bottom: 30px;
+}
 
+.rodape{
+    background: linear-gradient( to bottom black 100%);
+    color: var(--color-neutral-0);
+    padding: 1rem 0%;
+    text-align: center;
+    margin-top: 20px;
+}
 
+.rodape h2{
+    color: var(--white);
+    margin-bottom: 10%;
+    font-size: 1.5rem;
+}
 
+.rodape input, .rodape textarea, .rodape button{
+    display: flex;
+    width: 25%;
+    margin: 0.5rem auto;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid var(--gray);
+}
+
+.rodape button{
+   background-color: var(--red);
+   color: var(--white);
+   cursor: pointer;
+}
+
+.rodape button:hover{
+    background-color: #891708;
 }
