@@ -140,17 +140,7 @@ body{
 .home-text p{
     margin-bottom: 4rem;
 }
-.home-btn{
-    padding: 15px 45px;
-    background: #620b00;
-    color: var(--white);
-    border-radius: 10px;
-    font-weight: 700;
-    transition: all 0.5s;
-}
-.home-btn:hover{
-    background: #310909;
-}
+
 .home-img img{
     width: 100%; /* */
 }
@@ -268,4 +258,67 @@ body{
 
 .rodape button:hover{
     background-color: #891708;
+}
+
+/* parte do slider*/
+
+* {margin: 0; padding: 0;}
+
+.slider {
+    display: block;
+    height: 293px;
+    width: 600px;
+    margin: auto;
+    margin-top: 20px;
+    position: relative;
+}
+
+.slider li{
+    list-style: none;
+    position: absolute;
+}
+
+.slider img{
+    margin: auto;
+    height: 100px;
+    width: 100%;
+    vertical-align: top;
+}
+
+.slider input{
+    display: none;
+}
+
+.slider label{
+    background: #000;
+    bottom: 10px;
+    cursor: pointer;
+    display: block;
+    height: 10px;
+    position: absolute;
+    width: 10px;
+    z-index: 10;
+}
+
+.slider li:nth-child(1) label{
+    left: 10px;
+}
+
+.slider li:nth-child(2) label{
+    left: 40px;
+}
+
+.slider li:nth-child(3) label{
+    left: 70px;
+}
+
+.slider img{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.slider li input:checked ~ img{
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
 }
